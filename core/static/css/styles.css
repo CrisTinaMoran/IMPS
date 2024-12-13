@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#map-container {
+    flex: 3;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers the map image horizontally */
+    align-items: center; /* Centers the map image vertically */
+    overflow: hidden;
+    background-color: #2f2e26; /* Optional: gives a background color to help visualize the container */
+}
+
+#map-image {
+    max-width: 100%; /* Ensures the image scales correctly */
+    max-height: 100%; /* Prevents the image from overflowing */
+    height: auto; /* Maintains aspect ratio */
+    width: auto; /* Maintains aspect ratio */
+}
+
+#sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover, .tab-button:focus {
+    background-color: #bbb;
+}
+
+.room-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#show-direction {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#show-direction:hover {
+    background-color: #0056b3;
+}
+
+.pathwaybtn button{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0;
+}
+    
+
+

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>IMPS | Interactive Map</title>
+</head>
+<body>
+    <div id="map-container">
+        <img id="map-image" src="{% static 'images/1stFloor/1STFLOOR.jpg' %}" usemap="#1st-map" alt="Floor 1">
+    </div>
+    <div id="sidebar">
+        <div class="tabs">
+            <button class="tab-button" data-floor="{% static 'images/basement/BASEMENT.jpg' %}">Basement</button>
+            <button class="tab-button" data-floor="{% static 'images/1stFloor/1STFLOOR.jpg' %}">1st Floor</button>
+            <button class="tab-button" data-floor="{% static 'images/2ndFloor/2NDFLOOR.jpg' %}">2nd Floor</button>
+            <button class="tab-button" data-floor="{% static 'images/3rdFloor/3RDFLOOR.jpg' %}">3rd Floor</button>
+            <button class="tab-button" data-floor="{% static 'images/4thFloor/4thFLOOR.jpg' %}">4th Floor</button>
+        </div>
+        <div class="room-details">
+            <h3 id="room-name">Select a Room</h3>
+            <div class="pathwaybtn">
+                <button onclick="showPathway('{% static 'images/1stFloor/U.Stairs→T1.gif' %}')">Information Desk</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→Entrance.gif' %}')">Entrance</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→Room101.gif' %}')">Room 101</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→Room102.gif' %}')">Room 102</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→Room103.gif' %}')">Room 103</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/1st Floor FireExit.gif' %}')">Fire Exits</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→D.Stairs.gif' %}')">Stair to Basement</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→U.Stairs.gif' %}')">Stair to 2nd Floor</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→F.CR.gif' %}')">F-Toilet</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→M.CR.gif' %}')">M-Toilet</button>
+                <button onclick="showPathway('{% static 'images/1stFloor/T1→ToolRoom.gif' %}')">ToolRoom</button>
+            </div>
+            <button id="show-direction">Show Direction</button>
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
